@@ -1,0 +1,56 @@
+
+
+                Angular - Front End Development Framework 
+
+                Basic Commands 
+
+        1.create a project - ng new project-name 
+        2.run an angular project - ng serve --open /ng s -o
+        3. component creation - ng g c (component-name)
+        4.Angular Services - ng g s (service-folder/service-name)
+        5.Angular pipe - ng g p pipe-folder/pipe-name 
+
+
+                Basic Buliding Blocks 
+
+
+        1.Module -used to add 3rd party libraries 
+        2.component -TO create html page
+        3.selector - used to replace it html corresponding to the component 
+        4.Angular Services - reusable code that can share between components 
+        5.Asynchronus function - RxJs 
+        6.Observable - 
+                subscribe(call back)
+        7.To get http methods 
+        8.Dependency Injection - perform inside constructor 
+              syntax: access specifier variable-name:class-name 
+        9.Data Binding - data sharing inside a component 
+                - one way Binding 
+                    -component(ts) to view(html) 
+                        -string Interpolation - {{variable-name}} (class variable can be shown in html)
+                        -property Binding - [attribute]="property-name" (class variable can be shown in html uding attributes)
+                    -view(html) to component(ts)
+                        -event Binding -(event-name)="function-name ()"
+                        -event Binding using $event argument - (event-name)="function-name($evvent)"
+                - Two way Binding 
+                    - Using ngModel:
+                        -import FormsModule in appModule
+                        -[{ngModel}]='property-name'
+                    - Using reactiveForms: provide user input validation 
+                        -Import Reactive FormsModule in appModule 
+                            -form group 
+                            -form array
+                            -form control
+                             
+        10.Directives - DOM Manipulation 
+                -component Directives 
+                -structural Directive - to add/remove html element based on a 
+                                        condition or length of an array 
+                        -*ngIf="condition"
+                        -*ngFor="let variable-name of array-name"
+                -Attribute Directive - based on component property we can apply class of style to different
+                html element
+                    -ngClass 
+        11.Pipe - transform user input to another format 
+        12.Parent - child communication 
+                -parent to child : Input decorater 

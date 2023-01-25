@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Martian+Mono&family=Open+Sans:wght@300&family=Roboto+Mono:wght@100&family=Zen+Dots&display=swap');
+
+body{
+    font-family: 'Zen Dots', cursive;
+}

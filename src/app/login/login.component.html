@@ -1,0 +1,65 @@
+<!-- header -->
+
+<app-header></app-header>
+
+
+
+
+<!-- login page -->
+<section class="vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black">
+
+                <div class="px-5 ms-xl-4">
+                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                    <span class="h1 fw-bold mb-0">Log in</span>
+                </div>
+
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                    <form (ngSubmit)="login()" [formGroup]="loginForm" style="width: 23rem;" class="border p-5 rounded">
+
+                        <div class="form-floating mb-3">
+                            <input name="acno" formControlName="acno" type="text" id="floatingInput"
+                                class="form-control" placeholder="Account Number">
+                            <label for="floatingInput">Account Number</label>
+                        </div>
+                        <!-- invalid acno -->
+                        <div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched"
+                            class="text-danger mb-2">Invalid Account Number</div>
+
+                        <div class="form-floating mb-3">
+                            <input name="pswd" formControlName="pswd" type="password" id="floatingPassword"
+                                class="form-control" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <!-- invalid pswd -->
+                        <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched"
+                            class="text-danger mb-2">Invalid Password</div>
+
+
+                        <!-- errorMsg -->
+                        <div class="text-danger">{{errorMsg}}</div>
+
+                        <div class="pt-1 mb-4">
+                            <button class="btn btn-info btn-lg btn-block" type="submit">
+                                Login
+                                <span *ngIf="successMsg" class="spinner-border text-light" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                  </span>
+                            </button>
+                        </div>
+                        <p> Don't have an account? <a routerLink="/register" class="link-info">Register here</a></p>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+                <img src="https://startup.mp.gov.in/assets/img/login-bg.png" alt="Login image"
+                    style="height: 500px; width: 100%; ">
+            </div>
+        </div>
+    </div>
+</section>
